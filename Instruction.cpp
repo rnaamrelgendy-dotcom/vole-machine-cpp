@@ -1,5 +1,6 @@
 #include "Instruction.h"
 #include <cctype>
+#include <iostream>
 using namespace std;
 
 Instruction::Instruction() {
@@ -41,6 +42,8 @@ bool Instruction::validate() {
     return true;
 
 }
+
+
 
 
 std::string Instruction::getOpcode() const{

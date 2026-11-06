@@ -22,6 +22,11 @@ string Loader::sanitizeLine(string line) {
 
 bool Loader::loadprogram(string filename, int startAddress, Memory& memory) {
     ifstream file(filename);
+
+    if (!file.is_open()) {
+        cout << "Error: Cannot open file!" << endl;
+        return false;
+    }
     string line;
     int address = startAddress;
     while (getline(file,line)) {
@@ -32,8 +37,16 @@ bool Loader::loadprogram(string filename, int startAddress, Memory& memory) {
             file.close();
             return false;
         }
-        memory.write(address , line);
-        address++;
+        if (!validateAddress(address + 1)) {
+            cout << "Invalid address" << endl;
+            file.close();
+            return false;
+        }
+
+        memory.write(address, line.substr(0, 2));
+        memory.write(address + 1, line.substr(2, 2));
+
+        address += 2;
     }
     file.close();
     return true;
