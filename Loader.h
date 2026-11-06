@@ -1,5 +1,4 @@
-#ifndef VOLEMACHINE_LOADER_H
-#define VOLEMACHINE_LOADER_H
+#pragma once
 #include <string>
 using namespace std;
 
@@ -15,4 +14,3 @@ public:
     string sanitizeLine(string line);
 };
 
-#endif

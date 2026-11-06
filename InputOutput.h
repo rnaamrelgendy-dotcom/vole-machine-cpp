@@ -1,5 +1,4 @@
-#ifndef VOLEMACHINE_INPUTOUTPUT_H
-#define VOLEMACHINE_INPUTOUTPUT_H
+#pragma once
 #include <string>
 using namespace std;
 
@@ -8,5 +7,3 @@ public:
     string readInput(string prompt);
     void printOutput(string text);
 };
-
-#endif

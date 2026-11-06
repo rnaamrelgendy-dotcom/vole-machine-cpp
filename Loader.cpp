@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include<fstream>
+#include "Memory.h"
 using namespace std;
 
 bool Loader::validateAddress(int address) {
