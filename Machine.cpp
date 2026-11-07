@@ -56,7 +56,7 @@ void Machine::displayStats() {
     if (running) {
         cout<<"Machine running\n";
     }else {
-        cout<<"Machine not running\n";
+        cout<<"Machine Status: Halted\n";
     }
     cout<<"Program Counter : "<<cpu.getPc()<<"\n";
     cout<<"Instruction Register : "<<cpu.getIR()<<"\n";
@@ -68,4 +68,8 @@ void Machine::displayRegisters(){
         cout << "R" << i << ": "
              << registers[i].getValue() << "\n";
     }
+}
+
+void Machine::displayMemory() {
+    memory.displayMemory(io);
 }

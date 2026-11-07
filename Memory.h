@@ -1,5 +1,6 @@
 #include <string>
 #pragma once
+#include"InputOutput.h"
 using namespace std;
 
 class Memory {
@@ -13,7 +14,7 @@ public:
     string read(int i);
     bool write(int i, string val);
     void clear();
-
+    void displayMemory(InputOutput& io) const;
 
 
 };

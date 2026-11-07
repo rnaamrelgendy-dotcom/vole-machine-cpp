@@ -21,7 +21,7 @@ public:
     void reset();
     void displayStats();
     void displayRegisters();
-
+    void displayMemory();
 
 };
 

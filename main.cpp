@@ -14,6 +14,7 @@ int main() {
     machine.run();
     machine.displayStats();
     machine.displayRegisters();
+    machine.displayMemory();
 
     return 0;
 }
