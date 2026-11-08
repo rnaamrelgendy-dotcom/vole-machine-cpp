@@ -3,6 +3,7 @@
 using namespace std;
 
 string InputOutput::readInput(string prompt) {
+    if (inputHandler) return inputHandler(prompt);
     cout<<prompt <<endl;
     string input;
     getline(cin,input);
@@ -10,5 +11,6 @@ string InputOutput::readInput(string prompt) {
 }
 
 void InputOutput::printOutput(string text) {
+    if (outputHandler) { outputHandler(text); return; }
     cout<<text<<endl;
 }

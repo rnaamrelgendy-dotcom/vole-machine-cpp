@@ -19,4 +19,7 @@ add_executable(Volemachine main.cpp
         Register.h
         CPU.cpp
         Machine.h
-        Machine.cpp)
+        Machine.cpp
+        veryHardtest.txt)
+
+configure_file(${CMAKE_SOURCE_DIR}/veryHardtest.txt ${CMAKE_BINARY_DIR}/veryHardtest.txt COPYONLY)

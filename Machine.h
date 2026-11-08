@@ -23,6 +23,7 @@ public:
     void displayRegisters();
     void displayMemory();
 
+    InputOutput& getIO()     { return io; }
+    Memory&      getMemory() { return memory; }
+    CPU&         getCPU()    { return cpu; }
 };
-
-
